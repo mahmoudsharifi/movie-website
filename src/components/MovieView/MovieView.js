@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { useParams } from 'react-router'
 
 export const MovieView = ({ movies, onBackClick }) => {
   const { id } = useParams()
   const token = localStorage.getItem('token')
   const [movie, setMovie] = useState(null)
-
-  console.log(movie, id)
 
   useEffect(() => {
     fetch(`https://movies-api-sharifi.herokuapp.com/movies/${id}`, {
@@ -21,7 +19,7 @@ export const MovieView = ({ movies, onBackClick }) => {
       .catch((error) => {
         console.log('Error fetching user data:', error)
       })
-  }, [token])
+  }, [token, id])
 
   if (!movie) return <h5>Loading........</h5>
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 export const MovieCard = ({ movie, handleAddToFavorites }) => {
   const navigate = useNavigate()
 
@@ -25,6 +25,7 @@ export const MovieCard = ({ movie, handleAddToFavorites }) => {
                 height: '100%',
                 objectFit: 'cover',
               }}
+              alt='ok'
             />
           </Col>
           <Col sm={24} md={8} lg={8}>

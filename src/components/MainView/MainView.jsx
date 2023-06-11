@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { MovieCard } from '../MovieCard/MovieCard'
 import { MovieView } from '../MovieView/MovieView'
 import { LoginView } from '../LoginView/LoginView'
@@ -7,10 +7,9 @@ import SignupView from '../SignupView/SignupView'
 import { NavigationBar } from '../NavigationBar/NavigationBar'
 import { ProfileView } from '../ProfileView/ProfileView'
 
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { BrowserRouter } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 
 export const MainView = () => {
   // movies data array

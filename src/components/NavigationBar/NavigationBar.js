@@ -1,10 +1,8 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const NavigationBar = ({ user, onLogout }) => {
-  const navigate = useNavigate()
-
   const handleLogout = () => {
     onLogout()
   }
